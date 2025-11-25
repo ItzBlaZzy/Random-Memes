@@ -21,13 +21,10 @@ async function getMeme() {
     }
 }
 
-// Load first meme when page loads
 getMeme();
 
-// Get new meme on button click
 newMemeBtn.addEventListener("click", getMeme);
 
-// Download meme
 downloadBtn.addEventListener("click", async (event) => {
     event.preventDefault();
     try {
@@ -45,7 +42,6 @@ downloadBtn.addEventListener("click", async (event) => {
     }
 });
 
-// Share meme
 shareBtn.addEventListener("click", async () => {
     if (!navigator.share) {
         alert("Sharing is not supported on this browser.");
@@ -62,3 +58,4 @@ shareBtn.addEventListener("click", async () => {
         console.error("Error sharing meme:", error);
     }
 });
+
